@@ -1,0 +1,38 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.lnk
+
+# Editor & IDE Directories
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.swp
+*.swo
+
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Local Environment & Secrets
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# Temporary / Scratch Files
+scratch/
+tmp/
+*.tmp
+
+# Optional: Scene check frames extracted for calibration
+aurum-main/scene_checks/
+aurum-main/scene_checks_detail/

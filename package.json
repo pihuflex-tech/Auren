@@ -1,0 +1,20 @@
+{
+  "name": "auren",
+  "version": "1.0.0",
+  "description": "High-luxury editorial fashion experience blending classical Renaissance sculpture with contemporary haute streetwear.",
+  "main": "serve.js",
+  "scripts": {
+    "start": "node serve.js",
+    "dev": "node serve.js"
+  },
+  "keywords": [
+    "auren",
+    "luxury-fashion",
+    "editorial-design",
+    "video-scrubbing",
+    "web-audio-api",
+    "cinematic",
+    "vanilla-javascript"
+  ],
+  "license": "UNLICENSED"
+}

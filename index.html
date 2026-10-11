@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AUREN — Classic Roots. Modern Attitude.</title>
+  <meta name="description" content="AUREN is an editorial luxury fashion house synthesizing classical Renaissance sculpture with contemporary high-end streetwear.">
+  
+  <!-- Favicon Monogram -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' font-family='serif' fill='%23D4AF37'>A</text></svg>">
+
+  <!-- Luxury Typography: Cormorant Garamond, Cinzel, Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- Minimal Transparent Editorial Navigation -->
+  <header class="editorial-nav" id="main-nav" role="banner">
+    <div class="nav-container">
+      <div class="nav-left">
+        <a href="#hero" class="nav-brand-mark" aria-label="AUREN Home">
+          <span class="monogram-a">A</span>
+        </a>
+      </div>
+
+      <nav class="nav-center" aria-label="Primary Navigation">
+        <a href="#collection" class="nav-link" id="nav-collection">COLLECTION</a>
+        <a href="#world-of-auren" class="nav-link" id="nav-world">THE WORLD OF AUREN</a>
+        <a href="#manifesto" class="nav-link" id="nav-manifesto">ATELIER</a>
+      </nav>
+
+      <div class="nav-right">
+        <!-- Interactive Motion Mode Switcher -->
+        <button class="nav-pill-btn motion-btn" id="motion-toggle" aria-label="Toggle Reduced Motion">
+          <span class="pill-dot"></span>
+          <span class="pill-text" id="motion-btn-text">MOTION: CINEMATIC</span>
+        </button>
+
+        <!-- Ambient Sound Toggle -->
+        <button class="nav-pill-btn sound-btn" id="sound-toggle" aria-label="Toggle Sound">
+          <span class="sound-bars" aria-hidden="true">
+            <i></i><i></i><i></i><i></i><i></i>
+          </span>
+          <span class="pill-text" id="sound-btn-text">SOUND OFF</span>
+        </button>
+
+        <a href="#collection" class="nav-discover-link" id="nav-discover">
+          DISCOVER <span class="arrow-diagonal" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Soundscape Toast Notice -->
+  <aside class="audio-notice" id="audio-notice" aria-live="polite">
+    <p>Atmospheric Atelier audio synthesized on activation</p>
+  </aside>
+
+  <main>
+    <!-- HERO PINNED SCROLL CONTAINER -->
+    <!-- Height of 480vh provides generous, silky, responsive scrubbing room -->
+    <section class="hero-scroll-container" id="hero-scroll-section" aria-label="Hero Video Scrubber">
+      <div class="hero-sticky-stage" id="hero-sticky-stage">
+        
+        <!-- Video & Poster Layer -->
+        <div class="hero-media-wrapper" id="hero-media-wrapper">
+          <!-- Separate Parallax Visual Layer for cursor tracking (isolated from scroll control) -->
+          <div class="hero-parallax-canvas" id="hero-parallax-canvas">
+            <!-- Scroll Controlled Video -->
+            <video 
+              id="hero-video" 
+              class="hero-video-element"
+              muted 
+              playsinline 
+              webkit-playsinline 
+              preload="auto"
+              aria-label="AUREN Cinematic Brand Journey Video">
+              <source src="videos/0925_optimized.mp4" type="video/mp4; codecs=avc1.640029">
+              <source src="videos/0925(3).mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+
+            <!-- Opening Image (A1(2).png) matching video first frame exactly for seamless handoff -->
+            <img 
+              id="hero-poster" 
+              class="hero-poster-image" 
+              src="images/A1(2).png" 
+              alt="AUREN Classical Garden with Marble Chessboard and Blooming Roses"
+              loading="eager"
+              fetchpriority="high">
+          </div>
+          
+          <!-- Homepage Header Overlay: subtle top vignette for transparent header legibility -->
+          <div class="hero-header-overlay" aria-hidden="true"></div>
+
+          <!-- Subtle Editorial Gradient & Vignette Overlay (maintains garden & checkerboard visibility) -->
+          <div class="hero-editorial-tint" aria-hidden="true"></div>
+        </div>
+
+        <!-- FULL-SCREEN EDITORIAL OPENING (Fades out smoothly on first scroll) -->
+        <div class="hero-opening-overlay" id="hero-opening-content">
+          <!-- Upper Eyebrow -->
+          <div class="hero-eyebrow-wrapper">
+            <span class="hero-eyebrow">A NEW EXPRESSION OF TIMELESS</span>
+          </div>
+
+          <!-- Monumental Wordmark & Tagline -->
+          <div class="hero-center-cluster">
+            <h1 class="hero-wordmark" id="auren-wordmark">A U R E N</h1>
+            <p class="hero-tagline">Classic roots. Modern attitude.</p>
+          </div>
+
+          <!-- Bottom Action Cluster -->
+          <div class="hero-bottom-cluster">
+            <a href="#collection" class="btn-explore-collection" id="hero-explore-btn">
+              <span class="btn-text">EXPLORE COLLECTION</span>
+              <span class="btn-arrow" aria-hidden="true">↗</span>
+            </a>
+
+            <!-- Subtle Scroll Cue -->
+            <div class="hero-scroll-cue" id="hero-scroll-cue" role="button" tabindex="0" aria-label="Scroll to enter the world of AUREN">
+              <span class="scroll-cue-text">SCROLL TO ENTER</span>
+              <div class="scroll-cue-line" aria-hidden="true">
+                <span class="scroll-cue-arrow">↓</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Editorial Corner Badges matching reference frame -->
+          <div class="hero-corner-left" aria-hidden="true">
+            <div class="corner-audio-badge">
+              <span class="corner-dots">•••••</span>
+              <span class="corner-label">SOUND OFF</span>
+            </div>
+            <div class="corner-manifesto-sub">
+              <span>ROOTED IN ART.</span>
+              <span>DRESSED FOR NOW.</span>
+            </div>
+          </div>
+
+          <div class="hero-corner-right" aria-hidden="true">
+            <span class="corner-edition">EDITION 2026 // N° 01</span>
+          </div>
+        </div>
+
+        <!-- RESTRAINED SCENE OVERLAYS (Appear only when their scene is visible, away from statues) -->
+
+        <!-- Scene 1: Mansion ("Enter the world of AUREN") -->
+        <div class="scene-overlay scene-mansion" id="scene-mansion" aria-hidden="true">
+          <div class="scene-content">
+            <span class="scene-label">SCENE 01 // THE ESTATE</span>
+            <h2 class="scene-title">“Enter the world of AUREN”</h2>
+            <div class="scene-divider"></div>
+            <p class="scene-desc">Where grand Baroque grandeur embraces contemporary silhouette and timeless proportion.</p>
+          </div>
+        </div>
+
+        <!-- Scene 2: Gallery ("Heritage, reimagined") - Placed on the LEFT away from statue on right -->
+        <div class="scene-overlay scene-gallery" id="scene-gallery" aria-hidden="true">
+          <div class="scene-content">
+            <span class="scene-label">SCENE 02 // THE GALLERY</span>
+            <h2 class="scene-title">“Heritage, reimagined”</h2>
+            <div class="scene-divider"></div>
+            <p class="scene-desc">Sculptural Carrara marble drapery translated into plush velvet and oversized tailoring.</p>
+          </div>
+        </div>
+
+        <!-- Scene 3: Café ("Everyday, elevated") - Placed on the RIGHT away from David statue on left -->
+        <div class="scene-overlay scene-cafe" id="scene-cafe" aria-hidden="true">
+          <div class="scene-content">
+            <span class="scene-label">SCENE 03 // THE BISTRO</span>
+            <h2 class="scene-title">“Everyday, elevated”</h2>
+            <div class="scene-divider"></div>
+            <p class="scene-desc">Renaissance perfection meeting the pulse and ease of modern street lifestyle.</p>
+          </div>
+        </div>
+
+        <!-- Scene 4: Marble Hall ("Made to be remembered") - Placed lower-left away from Apollo statue -->
+        <div class="scene-overlay scene-marble" id="scene-marble" aria-hidden="true">
+          <div class="scene-content">
+            <span class="scene-label">SCENE 04 // THE COLONNADE</span>
+            <h2 class="scene-title">“Made to be remembered”</h2>
+            <div class="scene-divider"></div>
+            <p class="scene-desc">Gold Corinthian columns frame the sovereign royal azure outerwear collection.</p>
+          </div>
+        </div>
+
+        <!-- Scene 5: Final Garden View (Reveal Explore the Collection, then unpin into next section) -->
+        <div class="scene-overlay scene-final" id="scene-final" aria-hidden="true">
+          <div class="scene-content final-card">
+            <span class="scene-label">THE COMPENDIUM // AW26</span>
+            <h2 class="final-title">Explore the Collection</h2>
+            <p class="final-desc">Immerse yourself in classical sculpture remixed with modern couture streetwear.</p>
+            <div class="final-actions">
+              <a href="#collection" class="btn-explore-collection final-cta" id="final-collection-btn">
+                <span class="btn-text">VIEW THE LOOKBOOK</span>
+                <span class="btn-arrow">↓</span>
+              </a>
+            </div>
+            <span class="final-scroll-hint">CONTINUE SCROLLING TO UNPIN</span>
+          </div>
+        </div>
+
+        <!-- Timeline Chapter Indicator & Scrub Scrubber -->
+        <aside class="hero-timeline" aria-label="Video Journey Chapters">
+          <div class="timeline-track">
+            <div class="timeline-fill" id="timeline-fill"></div>
+          </div>
+          <div class="timeline-chapters">
+            <button class="chapter-dot" data-time="0" aria-label="Opening Garden" title="Garden">
+              <span class="dot-num">01</span>
+              <span class="dot-name">Sanctuary</span>
+            </button>
+            <button class="chapter-dot" data-time="9.5" aria-label="Mansion" title="The Estate">
+              <span class="dot-num">02</span>
+              <span class="dot-name">Estate</span>
+            </button>
+            <button class="chapter-dot" data-time="15.5" aria-label="Gallery" title="The Gallery">
+              <span class="dot-num">03</span>
+              <span class="dot-name">Gallery</span>
+            </button>
+            <button class="chapter-dot" data-time="21" aria-label="Café" title="The Bistro">
+              <span class="dot-num">04</span>
+              <span class="dot-name">Bistro</span>
+            </button>
+            <button class="chapter-dot" data-time="27" aria-label="Marble Hall" title="Colonnade">
+              <span class="dot-num">05</span>
+              <span class="dot-name">Hall</span>
+            </button>
+            <button class="chapter-dot" data-time="32" aria-label="Collection Reveal" title="Return">
+              <span class="dot-num">06</span>
+              <span class="dot-name">Atelier</span>
+            </button>
+          </div>
+          <div class="timeline-timecode" id="timeline-timecode">00:00 / 00:32</div>
+        </aside>
+
+        <!-- Fallback Navigation for Reduced-Motion Users -->
+        <div class="reduced-motion-panel" id="reduced-motion-panel" style="display: none;">
+          <span class="rm-label">Reduced Motion Mode Active</span>
+          <div class="rm-controls">
+            <button class="rm-btn" id="rm-play-btn">Play Journey</button>
+            <button class="rm-btn" id="rm-prev-scene">← Prev Scene</button>
+            <button class="rm-btn" id="rm-next-scene">Next Scene →</button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2: PINNED DIAGONAL CARD EXHIBITION (5 CARDS: 1.jpg to 5.jpg) -->
+    <section class="cards-pinned-section" id="collection" aria-label="AUREN Autumn Winter Collection Cards">
+      <div class="cards-sticky-viewport" id="cards-sticky-viewport">
+        
+        <!-- Pinned Header / Stage Context -->
+        <div class="cards-stage-header">
+          <div class="cards-eyebrow-row">
+            <span class="editorial-badge">PAST MEETS PRESENT // AW26</span>
+            <div class="cards-index-badge">LOOK <span id="cards-current-idx">01</span> / 05</div>
+          </div>
+          <h2 class="cards-stage-heading">Past Meets Present</h2>
+          <p class="cards-stage-subhead">Classical marble posture re-imagined through avant-garde tailoring and Italian silks.</p>
+        </div>
+
+        <!-- The Diagonal Motion Card Deck -->
+        <div class="cards-motion-deck" id="cards-motion-deck">
+          
+          <!-- Card 1: 1.jpg -->
+          <article class="diagonal-card" data-card-idx="0" data-product="1">
+            <div class="card-cream-body">
+              <div class="card-media-wrapper">
+                <img src="images/1.jpg" alt="AUREN Rose Sovereign Double-Breasted Tuxedo" class="card-image" loading="lazy">
+                <span class="card-edition-tag">LOOK 01 // VILLA FLORENCE</span>
+              </div>
+              <div class="card-caption">
+                <div class="card-title-row">
+                  <h3 class="card-title">The Rose Sovereign Tuxedo</h3>
+                  <span class="card-price">€ 3,450</span>
+                </div>
+                <p class="card-desc">Double-breasted pastel silk tailoring with sculpted Carrara lapels and botanical corsage.</p>
+                <div class="card-actions">
+                  <button class="card-btn-bag" data-product="1">ACQUIRE PIECE</button>
+                  <button class="card-btn-view" data-product="1" aria-label="Quick View Look 01">QUICK VIEW ↗</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 2: 2.jpg -->
+          <article class="diagonal-card" data-card-idx="1" data-product="2">
+            <div class="card-cream-body">
+              <div class="card-media-wrapper">
+                <img src="images/2.jpg" alt="AUREN Tangerine Palazzo Streetwear Suit" class="card-image" loading="lazy">
+                <span class="card-edition-tag">LOOK 02 // PALAZZO BISTRO</span>
+              </div>
+              <div class="card-caption">
+                <div class="card-title-row">
+                  <h3 class="card-title">The Tangerine Palazzo Suit</h3>
+                  <span class="card-price">€ 2,850</span>
+                </div>
+                <p class="card-desc">Lacquered amber calfskin streetwear suit with rolled cuffs and high-top marble sneakers.</p>
+                <div class="card-actions">
+                  <button class="card-btn-bag" data-product="2">ACQUIRE PIECE</button>
+                  <button class="card-btn-view" data-product="2" aria-label="Quick View Look 02">QUICK VIEW ↗</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 3: 3.jpg -->
+          <article class="diagonal-card" data-card-idx="2" data-product="3">
+            <div class="card-cream-body">
+              <div class="card-media-wrapper">
+                <img src="images/3.jpg" alt="AUREN Shaggy Cloud Shearling Overcoat" class="card-image" loading="lazy">
+                <span class="card-edition-tag">LOOK 03 // PEDESTAL POP</span>
+              </div>
+              <div class="card-caption">
+                <div class="card-title-row">
+                  <h3 class="card-title">The Shaggy Cloud Overcoat</h3>
+                  <span class="card-price">€ 3,100</span>
+                </div>
+                <p class="card-desc">High-pile blush shearling coat paired with relaxed cotton joggers and citrus court high-tops.</p>
+                <div class="card-actions">
+                  <button class="card-btn-bag" data-product="3">ACQUIRE PIECE</button>
+                  <button class="card-btn-view" data-product="3" aria-label="Quick View Look 03">QUICK VIEW ↗</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 4: 4.jpg -->
+          <article class="diagonal-card" data-card-idx="3" data-product="4">
+            <div class="card-cream-body">
+              <div class="card-media-wrapper">
+                <img src="images/4.jpg" alt="AUREN Emerald Salon Velvet Smoking Suit" class="card-image" loading="lazy">
+                <span class="card-edition-tag">LOOK 04 // THE ATELIER</span>
+              </div>
+              <div class="card-caption">
+                <div class="card-title-row">
+                  <h3 class="card-title">The Emerald Salon Velvet</h3>
+                  <span class="card-price">€ 2,950</span>
+                </div>
+                <p class="card-desc">Deep moss velvet smoking suit with unbuttoned silk faille shirt and gilded baroque accents.</p>
+                <div class="card-actions">
+                  <button class="card-btn-bag" data-product="4">ACQUIRE PIECE</button>
+                  <button class="card-btn-view" data-product="4" aria-label="Quick View Look 04">QUICK VIEW ↗</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Card 5: 5.jpg -->
+          <article class="diagonal-card" data-card-idx="4" data-product="5">
+            <div class="card-cream-body">
+              <div class="card-media-wrapper">
+                <img src="images/5.jpg" alt="AUREN Imperial Caesar Robe with Laurel Crown" class="card-image" loading="lazy">
+                <span class="card-edition-tag">LOOK 05 // THE BASILICA</span>
+              </div>
+              <div class="card-caption">
+                <div class="card-title-row">
+                  <h3 class="card-title">The Imperial Caesar Robe</h3>
+                  <span class="card-price">€ 4,600</span>
+                </div>
+                <p class="card-desc">Dusted rose fur mantle with hand-forged 24K gold laurel wreath and ceremonial sphinx shield.</p>
+                <div class="card-actions">
+                  <button class="card-btn-bag" data-product="5">ACQUIRE PIECE</button>
+                  <button class="card-btn-view" data-product="5" aria-label="Quick View Look 05">QUICK VIEW ↗</button>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Stage Scroller HUD: Dots to navigate directly to any card -->
+        <div class="cards-nav-dots" id="cards-nav-dots" aria-label="Look Selector">
+          <button class="card-dot active" data-idx="0" aria-label="Look 01">01</button>
+          <button class="card-dot" data-idx="1" aria-label="Look 02">02</button>
+          <button class="card-dot" data-idx="2" aria-label="Look 03">03</button>
+          <button class="card-dot" data-idx="3" aria-label="Look 04">04</button>
+          <button class="card-dot" data-idx="4" aria-label="Look 05">05</button>
+        </div>
+
+        <!-- Subtle Ambient Stage Floor & Direction Cue -->
+        <div class="cards-stage-footer">
+          <span class="cards-scroll-hint">SCROLL TO TRAVERSE LOOKS ↘</span>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 2.5: THE ART OF BEING SEEN - EXPANDING 9:16 STATUE MONOLITH -->
+    <section class="statue-expand-section" id="art-of-being-seen" aria-label="AUREN Visual Identity">
+      <div class="statue-sticky-viewport" id="statue-sticky-viewport">
+
+        <!-- Site's Cream Canvas Ambient Background -->
+        <div class="statue-cream-backdrop" aria-hidden="true"></div>
+
+        <!-- 4 Restrained Corner Editorial Labels matching current typography -->
+        <div class="statue-corner-label corner-tl" id="corner-label-tl">
+          <span class="corner-eyebrow">MONOLITH 07</span>
+          <span class="corner-text">THE MODERN APOLLO</span>
+        </div>
+
+        <div class="statue-corner-label corner-tr" id="corner-label-tr">
+          <span class="corner-eyebrow">AUREN ARCHIVE</span>
+          <span class="corner-text">EDITION MMXXVI</span>
+        </div>
+
+        <div class="statue-corner-label corner-bl" id="corner-label-bl">
+          <span class="corner-eyebrow">CLASSICAL ROOTS</span>
+          <span class="corner-text">CARRARA × CASHMERE</span>
+        </div>
+
+        <div class="statue-corner-label corner-br" id="corner-label-br">
+          <span class="corner-eyebrow">MILANO // PARIS</span>
+          <span class="corner-text">SCROLL TO IMMERSE ↓</span>
+        </div>
+
+        <!-- The Centered Expanding Card (9:16 portrait with rounded corners -> 16:9 full viewport) -->
+        <div class="statue-card-container" id="statue-card-container">
+          <div class="statue-card-inner">
+            <img src="images/7.jpg" alt="AUREN Apollo in Blush Tailoring and Modern Headphones" class="statue-card-img" id="statue-card-img" loading="eager">
+            
+            <!-- Subtle Vignette / Scrim Gradient Layer that emerges to protect typography -->
+            <div class="statue-cinematic-scrim" id="statue-cinematic-scrim" aria-hidden="true"></div>
+
+            <!-- Full-Screen Editorial Overlay (Fades in once full-screen with subtle text shadows) -->
+            <div class="statue-editorial-reveal" id="statue-editorial-reveal" aria-hidden="true">
+              <div class="statue-reveal-content">
+                <span class="statue-reveal-eyebrow">AUREN ATELIER // STATEMENT</span>
+                <h2 class="statue-reveal-headline">“The art of being seen.”</h2>
+                <div class="statue-reveal-rule" aria-hidden="true"></div>
+                <p class="statue-reveal-desc">
+                  Rooted in the timeless symmetry of classical Roman sculpture, reimagined with the fearless posture and relaxed luxury of contemporary streetwear.
+                </p>
+                <div class="statue-reveal-actions">
+                  <a href="#collection" class="statue-reveal-btn" id="statue-explore-btn">
+                    <span class="btn-text">EXPLORE THE COLLECTION</span>
+                    <span class="btn-arrow" aria-hidden="true">→</span>
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 3: THE WORLD OF AUREN / MANIFESTO -->
+    <section class="section-manifesto" id="world-of-auren" aria-label="Brand Philosophy">
+      <div class="manifesto-grid">
+        <div class="manifesto-visual">
+          <img src="images/AAAs.png" alt="AUREN Contemporary Classical Apollo with Headphone and Rose Lenses" class="manifesto-img" loading="lazy">
+          <div class="visual-caption">
+            <span>FIGURE 01 // APOLLO IN STREETWEAR</span>
+            <span>FLORENTINE GOLD HEADPHONES & BLUSH COAT</span>
+          </div>
+        </div>
+
+        <div class="manifesto-text-block">
+          <span class="section-eyebrow">THE PHILOSOPHY</span>
+          <h2 class="manifesto-title">Where Classical Sculpture Meets Modern Luxury</h2>
+          
+          <p class="manifesto-lead">
+            AUREN was conceived not as a fleeting trend, but as an eternal dialogue between ancient Roman grandeur and the unapologetic posture of contemporary streetwear.
+          </p>
+          
+          <div class="manifesto-pillars">
+            <div class="pillar">
+              <h3 class="pillar-title">01 / Classical Roots</h3>
+              <p>Every silhouette begins with mathematical marble proportions—the golden ratio, dramatic Roman toga drapery, and Florentine architectural symmetry.</p>
+            </div>
+            <div class="pillar">
+              <h3 class="pillar-title">02 / Modern Attitude</h3>
+              <p>Re-engineered for contemporary metropolis life. Technical waterproof linings, relaxed dropped shoulders, and heavyweight sportswear textiles.</p>
+            </div>
+          </div>
+
+          <div class="manifesto-quote-box">
+            <blockquote>
+              “We do not imitate the past. We dress statues for the street and elevate the street into an exhibition.”
+            </blockquote>
+            <cite>— AUREN Atelier, Milano</cite>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: THE ATELIER & ARCHIVE -->
+    <section class="section-atelier" id="manifesto" aria-label="Atelier Details">
+      <div class="atelier-wrapper">
+        <div class="atelier-stat-row">
+          <div class="stat-col">
+            <span class="stat-num">100%</span>
+            <span class="stat-label">Italian Sourced Silks & Cashmeres</span>
+          </div>
+          <div class="stat-col">
+            <span class="stat-num">120h</span>
+            <span class="stat-label">Hand Draping Per Runway Coat</span>
+          </div>
+          <div class="stat-col">
+            <span class="stat-num">50</span>
+            <span class="stat-label">Numbered Pieces Per Edition</span>
+          </div>
+          <div class="stat-col">
+            <span class="stat-num">24K</span>
+            <span class="stat-label">Gold-Plated Hardware & Chains</span>
+          </div>
+        </div>
+
+        <!-- VIP Invitation -->
+        <div class="vip-invitation-box">
+          <div class="vip-content">
+            <span class="vip-badge">PRIVATE SALON</span>
+            <h3 class="vip-title">Request Private Atelier Access</h3>
+            <p class="vip-desc">Receive private invitations to seasonal salon presentations in Paris, Milan, and New York.</p>
+            <form class="vip-form" id="vip-form" onsubmit="event.preventDefault(); window.handleVipSubmit();">
+              <input type="email" class="vip-input" id="vip-email" placeholder="ENTER YOUR REPUTABLE EMAIL..." required>
+              <button type="submit" class="vip-submit-btn" id="vip-submit-btn">REQUEST ACCESS ↗</button>
+            </form>
+            <div class="vip-status" id="vip-status" aria-live="polite"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- LUXURY EDITORIAL FOOTER -->
+  <footer class="editorial-footer">
+    <div class="footer-grid">
+      <div class="footer-col brand-col">
+        <span class="footer-logo">AUREN</span>
+        <p class="footer-brand-desc">Classical roots. Modern attitude. Haute streetwear manufactured in Italy.</p>
+        <span class="footer-copyright">© 2026 AUREN HAUTE MAISON. ALL RIGHTS RESERVED.</span>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">FLAGSHIP BOUTIQUES</h4>
+        <ul class="footer-list">
+          <li><strong>MILANO</strong> — Via Montenapoleone 8</li>
+          <li><strong>PARIS</strong> — 18 Rue Saint-Honoré</li>
+          <li><strong>NEW YORK</strong> — 740 Madison Avenue</li>
+          <li><strong>TOKYO</strong> — Ginza 6-Chome</li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">COLLECTIONS</h4>
+        <ul class="footer-list">
+          <li><a href="#collection">Autumn / Winter 2026</a></li>
+          <li><a href="#collection">Sculptural Outerwear</a></li>
+          <li><a href="#collection">The Atelier Archive</a></li>
+          <li><a href="#collection">Carrara Marble Cashmere</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-col-title">LEGAL & SERVICE</h4>
+        <ul class="footer-list">
+          <li><a href="#">Bespoke Commission</a></li>
+          <li><a href="#">Certificate of Authenticity</a></li>
+          <li><a href="#">Client Concierge</a></li>
+          <li><a href="#">Privacy Protocol</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- QUICK VIEW MODAL -->
+  <div class="product-modal" id="product-modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" id="modal-backdrop"></div>
+    <div class="modal-window">
+      <button class="modal-close" id="modal-close" aria-label="Close modal">×</button>
+      <div class="modal-body" id="modal-body">
+        <!-- Dynamically populated -->
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPT -->
+  <script src="script.js"></script>
+</body>
+</html>
